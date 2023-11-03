@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundbrder">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="150dp"
+        android:textSize="40dp"
+        android:textColor="@color/design_default_color_primary_variant"/>
+    <RelativeLayout
+        android:layout_width="700dp"
+        android:layout_height="700dp"
+        android:layout_marginTop="250dp">
+    <ImageButton
+        android:layout_width="126dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/profile"
+        android:id="@+id/profile" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_below="@+id/profile"
+            android:layout_marginLeft="80dp"
+            android:textSize="25dp"
+            android:textColor="@color/design_default_color_primary_variant"/>
+        <ImageButton
+            android:id="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_toRightOf="@+id/profile"
+            android:background="@drawable/car" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book a Ride"
+            android:layout_below="@+id/car"
+            android:layout_marginLeft="240dp"
+            android:textSize="25dp"
+            android:textColor="@color/design_default_color_primary_variant"/>
+        <ImageButton
+            android:layout_width="126dp"
+            android:layout_height="100dp"
+            android:id="@+id/History"
+            android:background="@drawable/history"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="65dp"
+            android:layout_below="@+id/profile"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:layout_below="@+id/History"
+            android:layout_marginLeft="70dp"
+            android:textSize="25dp"
+            android:textColor="@color/design_default_color_primary_variant"/>
+
+        <ImageButton
+            android:id="@+id/offer"
+            android:layout_width="126dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/car"
+            android:layout_toRightOf="@+id/History"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/gift" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offers"
+            android:layout_below="@+id/offer"
+            android:layout_marginLeft="260dp"
+            android:textSize="25dp"
+            android:textColor="@color/design_default_color_primary_variant"/>
+    </RelativeLayout>
+</RelativeLayout>

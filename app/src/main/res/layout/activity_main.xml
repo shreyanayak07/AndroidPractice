@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroundbrder">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Provide your details to Register"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="20dp"
+        android:textColor="@color/design_default_color_primary_variant" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter First Name"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="170dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/First_Name"/>
+
+    <EditText
+        android:id="@+id/Last_Name"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/First_Name"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="40dp"
+        android:hint="Enter Last Name" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Email ID"
+        android:inputType="textWebEmailAddress"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@+id/First_Name"
+        android:id="@+id/Email"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Email"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/spinner"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:hint="Enter your Phone Number"
+        android:inputType="phone"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/Phone"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Phone"
+        android:hint="Enter your User Name"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/useName1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/useName1"
+        android:hint="Enter your Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/pass1" />
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/pass1"
+    android:hint="Confirm Password"
+    android:inputType="textPassword"
+    android:layout_marginTop="30dp"
+    android:layout_marginRight="40dp"
+    android:layout_marginLeft="40dp"
+    android:id="@+id/pass2" />
+
+    <Button
+        android:id="@+id/Register_Here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Here"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginVertical="600dp"/>
+
+</RelativeLayout>
