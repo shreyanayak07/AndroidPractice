@@ -2,4 +2,12 @@
     <string name="app_name">AndroidPractice</string>
     <string name="Username">shreya</string>
     <string name="Password">1234@1234</string>
+
+    <string-array name="Select_City">
+        <item>Mangalore</item>
+        <item>Bangalore</item>
+        <item>Chennai</item>
+        <item>Goa</item>
+        <item>Kasargod</item>
+    </string-array>
 </resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundbrder">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="270dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:text="LOCATION"
+            android:textColor="@color/design_default_color_primary_variant"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:text="Select City"
+            android:id="@+id/selectcity"
+            android:textColor="@color/design_default_color_primary_variant"/>
+        <Spinner
+            android:id="@+id/cityList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="30dp"
+            android:textSize="30dp"
+            android:layout_marginLeft="45dp"
+            android:layout_toRightOf="@+id/selectcity"
+            android:layout_below="@id/location"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectcity"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:text="Your Ride"
+            android:id="@+id/yourRide"
+            android:textColor="@color/design_default_color_primary_variant"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/yourRide"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/Ridecar"
+            android:textColor="@color/design_default_color_primary_variant"/>\
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Ridecar"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:text="Rate"
+            android:id="@+id/Rate"
+            android:textColor="@color/design_default_color_primary_variant"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/Rate"
+            android:id="@+id/RateEdit"
+            android:textColor="@color/design_default_color_primary_variant"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RateEdit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:text="Enter your Pick-Up Location"
+            android:id="@+id/pickuplocation"
+            android:textColor="@color/design_default_color_primary_variant"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/pickuplocation"
+            android:id="@+id/pickup"
+            android:textColor="@color/design_default_color_primary_variant"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pickup"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:text="Enter your Drop Location"
+            android:id="@+id/Droplocation"
+            android:textColor="@color/design_default_color_primary_variant"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/Droplocation"
+            android:id="@+id/drop"
+            android:textColor="@color/design_default_color_primary_variant"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drop"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="20dp"
+            android:text="Cancel"
+            android:id="@+id/rideCancel"/>
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drop"
+            android:layout_toRightOf="@+id/rideCancel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Confirm"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

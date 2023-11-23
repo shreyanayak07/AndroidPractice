@@ -1,8 +1,12 @@
 package com.example.androidpractice;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +42,7 @@ public class MyCarListAdapter extends RecyclerView.Adapter<MyCarListAdapter.View
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //view.getContext().startActivity(new Intent(view.getContext(),Location.class));
                 Toast.makeText(view.getContext(),"Ride Booked "+myListData.getDescription(),Toast.LENGTH_LONG).show();
             }
         });
@@ -47,7 +52,7 @@ public class MyCarListAdapter extends RecyclerView.Adapter<MyCarListAdapter.View
     public int getItemCount() {
         return listdata.length;
     }
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder{
             public ImageView imageView;
             public TextView textView;
             public TextView textView1;
@@ -58,6 +63,12 @@ public class MyCarListAdapter extends RecyclerView.Adapter<MyCarListAdapter.View
             this.textView = (TextView) itemView.findViewById(R.id.textView);
             this.textView1=(TextView)itemView.findViewById(R.id.price);
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayout);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    v.getContext().startActivity(new Intent(v.getContext(),Location.class));
+                }
+            });
         }
     }
 }
