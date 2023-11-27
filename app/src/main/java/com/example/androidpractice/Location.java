@@ -1,5 +1,6 @@
 package com.example.androidpractice;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,12 +23,25 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemSel
         setContentView(R.layout.location);
         Spinner s = (Spinner) findViewById(R.id.cityList);
         Button cancel=findViewById(R.id.rideCancel);
+        Button confirm=findViewById(R.id.rideConfirm);
         EditText ride=findViewById(R.id.Ridecar);
         EditText price=findViewById(R.id.RateEdit);
-        price.setText("Rs10 per KM");
+
         Intent intent = getIntent();
+
         String str=  intent.getStringExtra("Car_name");
         ride.setText(str);
+
+        String pr=intent.getStringExtra("Price");
+        price.setText(pr);
+
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                confirmPressed();
+            }
+        });
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.Select_City,
@@ -54,5 +69,20 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemSel
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+    public void confirmPressed(){
+        AlertDialog.Builder alert=new AlertDialog.Builder(Location.this);
+        alert.create();
+        alert.setTitle("Ride Booked");
+        alert.setIcon(R.drawable.car);
+        alert.setMessage("Your Ride has been booked");
+        alert.setPositiveButton("OK",new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int which) {
+                Intent back=new Intent(getApplicationContext(),BookingDetails.class);
+                startActivity(back);
+            }
+        });
+        AlertDialog alertDialog = alert.create();
+        alertDialog.show();
     }
 }

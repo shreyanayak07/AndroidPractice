@@ -44,7 +44,7 @@ public class MyCarListAdapter extends RecyclerView.Adapter<MyCarListAdapter.View
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(),"Ride Booked "+myListData.getDescription(),Toast.LENGTH_LONG).show();
-                view.getContext().startActivity(new Intent(view.getContext(),Location.class).putExtra("Car_name",myListData.getDescription()));
+                view.getContext().startActivity(new Intent(view.getContext(),Location.class).putExtra("Car_name",myListData.getDescription()).putExtra("Price",myListData.getPrice()));
             }
         });
     }
