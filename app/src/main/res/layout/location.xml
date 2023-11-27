@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="170dp"
         android:background="@color/white">
 
         <TextView
@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/location"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
             android:textSize="20dp"
             android:text="Select City"
             android:id="@+id/selectcity"
@@ -36,7 +37,7 @@
             android:layout_marginLeft="45dp"
             android:layout_toRightOf="@+id/selectcity"
             android:layout_below="@id/location"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="30dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +51,7 @@
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
             android:layout_below="@+id/yourRide"
             android:layout_marginLeft="20dp"
             android:id="@+id/Ridecar"
@@ -69,7 +70,7 @@
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="20dp"
             android:layout_below="@+id/Rate"
             android:id="@+id/RateEdit"
@@ -87,7 +88,7 @@
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="20dp"
             android:layout_below="@+id/pickuplocation"
             android:id="@+id/pickup"
@@ -106,7 +107,7 @@
 
         <EditText
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="20dp"
             android:layout_below="@+id/Droplocation"
             android:id="@+id/drop"
