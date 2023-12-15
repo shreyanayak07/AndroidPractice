@@ -67,10 +67,11 @@
             android:layout_width="126dp"
             android:layout_height="100dp"
             android:layout_below="@+id/car"
-            android:layout_toRightOf="@+id/History"
             android:layout_marginLeft="65dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="67dp"
+            android:layout_toRightOf="@+id/History"
             android:background="@drawable/gift" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,5 +80,7 @@
             android:layout_marginLeft="260dp"
             android:textSize="25dp"
             android:textColor="@color/design_default_color_primary_variant"/>
+
+
     </RelativeLayout>
 </RelativeLayout>

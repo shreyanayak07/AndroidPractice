@@ -17,6 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Location extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+    public Location(String sedan, String locationA, String destinationX) {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
