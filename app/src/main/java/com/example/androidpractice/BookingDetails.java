@@ -19,7 +19,6 @@ public class BookingDetails extends AppCompatActivity {
         ImageButton offer=findViewById(R.id.offer);
         ImageButton car=findViewById(R.id.car);
 
-
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +27,7 @@ public class BookingDetails extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Profile", Toast.LENGTH_SHORT).show();
             }
         });
+
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +41,7 @@ public class BookingDetails extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),OffersActivity.class);
                 startActivity(i);
-                Toast.makeText(getApplicationContext(),"Look the History", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Select the Offer Coupon", Toast.LENGTH_SHORT).show();
             }
         });
         car.setOnClickListener(new View.OnClickListener() {

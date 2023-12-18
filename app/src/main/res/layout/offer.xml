@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundbrder">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:background="@color/white">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_width="350dp"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/offer1"/>
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/offer1"
+        android:layout_width="350dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/offer2"
         />
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/offer2"
+        android:layout_width="350dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/offer3"
+        />
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/offer3"
+        android:layout_width="350dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/offer4"
+        />
+    </RelativeLayout>
 </RelativeLayout>

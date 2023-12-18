@@ -10,4 +10,8 @@
         <item>Goa</item>
         <item>Kasargod</item>
     </string-array>
+    <string name="offer1">Upto 50% cashback on the first ride</string>
+    <string name="offer2">Lucky Free Ride</string>
+    <string name="offer3">Long distance discount</string>
+    <string name="offer4">Get Rs50 discount</string>
 </resources>
