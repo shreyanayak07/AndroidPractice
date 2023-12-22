@@ -20,11 +20,11 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemSel
 //    String sedan;
 //    String locationA;
 //    String destinationX;
-//    public Location(String sedan, String locationA, String destinationX) {
-//        this.sedan=sedan;
-//        this.locationA=locationA;
-//        this.destinationX=destinationX;
-//    }
+////    public Location(String sedan, String locationA, String destinationX) {
+////        this.sedan=sedan;
+////        this.locationA=locationA;
+////        this.destinationX=destinationX;
+////    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

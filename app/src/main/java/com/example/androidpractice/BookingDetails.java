@@ -39,7 +39,7 @@ public class BookingDetails extends AppCompatActivity {
         offer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(),OffersActivity.class);
+                Intent i=new Intent(getApplicationContext(), ApplyOffersActivity.class);
                 startActivity(i);
                 Toast.makeText(getApplicationContext(),"Select the Offer Coupon", Toast.LENGTH_SHORT).show();
             }
