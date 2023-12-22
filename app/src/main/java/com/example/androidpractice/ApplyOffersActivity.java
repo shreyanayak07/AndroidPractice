@@ -19,7 +19,7 @@ public class ApplyOffersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apply_offers);
 
-        availableOffers = new ArrayList<>(availableOffers);
+        availableOffers = new ArrayList<>();
         availableOffers.add(new Offer("OFFER10", 10.0));
         availableOffers.add(new Offer("OFFER20", 20.0));
 

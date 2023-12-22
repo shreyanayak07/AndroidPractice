@@ -1,5 +1,6 @@
 package com.example.androidpractice;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemSel
         Button confirm=findViewById(R.id.rideConfirm);
         EditText ride=findViewById(R.id.Ridecar);
         EditText price=findViewById(R.id.RateEdit);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button applyoffer=findViewById(R.id.Offersapplied);
 
         Intent intent = getIntent();
 
@@ -44,6 +46,13 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemSel
         String pr=intent.getStringExtra("Price");
         price.setText(pr);
 
+        applyoffer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent apply=new Intent(getApplicationContext(),ApplyOffersActivity.class);
+                startActivity(apply);
+            }
+        });
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
