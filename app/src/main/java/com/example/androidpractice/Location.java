@@ -1,6 +1,7 @@
 package com.example.androidpractice;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,13 +48,32 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemSel
         String pr=intent.getStringExtra("Price");
         price.setText(pr);
 
+        double baseFare = 20.0;
+        final double[] totalFare = new double[1];
+
+        final int REQUEST_APPLY_OFFER = 1;
         applyoffer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent apply=new Intent(getApplicationContext(),ApplyOffersActivity.class);
+                Intent apply = new Intent(getApplicationContext(), ApplyOffersActivity.class);
                 startActivity(apply);
             }
-        });
+            @SuppressLint("MissingInflatedId")
+            Button applyOfferButton = findViewById(R.id.offer);
+            applyOfferButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent applyOfferIntent = new Intent(getApplicationContext(), ApplyOffersActivity.class);
+                    startActivityForResult(applyOfferIntent, REQUEST_APPLY_OFFER);
+                }
+            });
+
+
+        private double calculateTotalFare(double baseFare, double discount) {
+            return baseFare - (baseFare * (discount / 100.0));
+        }
+
+
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

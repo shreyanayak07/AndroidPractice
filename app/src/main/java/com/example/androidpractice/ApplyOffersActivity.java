@@ -1,4 +1,6 @@
 package com.example.androidpractice;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,6 +46,10 @@ public class ApplyOffersActivity extends AppCompatActivity {
         for (Offer offer : availableOffers) {
             if (offer.getCode().equals(enteredCode)) {
                 Toast.makeText(this, "Offer applied: " + offer.getDiscount() + "% discount", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.putExtra("offerCode", offer.getCode());
+                intent.putExtra("offerDiscount", offer.getDiscount());
+                setResult(Activity.RESULT_OK, intent);
                 finish();
                 return;
             }
